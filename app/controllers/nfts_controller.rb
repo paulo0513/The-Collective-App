@@ -11,12 +11,13 @@ class NftsController < ApplicationController
 
   # GET /nfts/1
   def show
-    render json: @nft
+    render json: @nft, include: :comments
   end
 
   # POST /nfts
   def create
     @nft = Nft.new(nft_params)
+    @nft.user = @current_user
 
     if @nft.save
       render json: @nft, status: :created
