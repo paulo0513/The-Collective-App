@@ -18,7 +18,7 @@ class NftsController < ApplicationController
     @nft = Nft.new(nft_params)
 
     if @nft.save
-      render json: @nft, status: :created, location: @nft
+      render json: @nft, status: :created
     else
       render json: @nft.errors, status: :unprocessable_entity
     end
