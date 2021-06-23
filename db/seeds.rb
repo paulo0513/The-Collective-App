@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Nft.destroy_all
+Comment.destroy_all
+User.destroy_all
+
+@user = User.create!(username: 'paul', email: 'paul@email.com', password: '1234')
+
+puts "#{User.count} users created"
