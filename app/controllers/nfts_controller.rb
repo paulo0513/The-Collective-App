@@ -1,5 +1,5 @@
 class NftsController < ApplicationController
-  before_action :set_nft, only: [:show, :update, :destroy]
+  before_action :set_nft, only: [:show, :update, :destroy, :add_comment]
   before_action :authorize_request, only: [:create, :update, :destroy]
 
   # GET /nfts
@@ -38,6 +38,14 @@ class NftsController < ApplicationController
   # DELETE /nfts/1
   def destroy
     @nft.destroy
+  end
+
+  def add_comment
+    @comment = Comment.find(params(:comment_id))
+    # @nft = Nft.find(params(:id))
+
+    @nft.comments.push(@comment)
+    render json: @nft, include: :comments
   end
 
   private
