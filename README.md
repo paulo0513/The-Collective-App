@@ -127,12 +127,12 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Project Proposal    |    H     |     8 hrs      |     0 hrs     |     TBD     |
-| Backend Framework   |    H     |     2 hrs      |     0 hrs     |     TBD     |
-| Model Setup         |    H     |     1 hrs      |     0 hrs     |     TBD     |
-| Route Setup         |    H     |     1 hrs      |     0 hrs     |     TBD     |
-| Controller Setup    |    H     |     2 hrs      |     0 hrs     |     TBD     |
-| Authentication      |    H     |     3 hrs      |     0 hrs     |     TBD     |
+| Project Proposal    |    H     |     8 hrs      |     8 hrs     |     TBD     |
+| Backend Framework   |    H     |     2 hrs      |     2 hrs     |     TBD     |
+| Model Setup         |    H     |     1 hrs      |     2 hrs     |     TBD     |
+| Route Setup         |    H     |     1 hrs      |     1 hrs     |     TBD     |
+| Controller Setup    |    H     |     2 hrs      |     1 hrs     |     TBD     |
+| Authentication      |    H     |     3 hrs      |     1.5 hrs     |     TBD     |
 | Cors Setup          |    H     |     1 hrs      |     0 hrs     |     TBD     |
 | Seed Data           |    H     |     3 hrs      |     0 hrs     |     TBD     |
 | Backend Testing     |    H     |     1 hrs      |     0 hrs     |     TBD     |
