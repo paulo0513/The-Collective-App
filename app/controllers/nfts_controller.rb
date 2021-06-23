@@ -1,5 +1,6 @@
 class NftsController < ApplicationController
   before_action :set_nft, only: [:show, :update, :destroy]
+  before_action :authorize_request, only: [:create, :update, :destroy]
 
   # GET /nfts
   def index
