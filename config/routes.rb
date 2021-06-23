@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   put '/nfts/:id/comments/:comment_id', to: 'nfts#add_comment'
   resources :comments
   resources :nfts
-  resources :users, only :create
+  resources :users, only: :create
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
