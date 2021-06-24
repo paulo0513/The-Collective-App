@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   post '/auth/login', to: 'authentication#login'
   get '/auth/verify', to: 'authentication#verify'
-  put '/nfts/:id/comments/:comment_id', to: 'nfts#add_comment'
+  # put '/nfts/:id/comments/:comment_id', to: 'nfts#add_comment'
   resources :comments
   resources :nfts
   resources :users, only: :create
