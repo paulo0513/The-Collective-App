@@ -40,6 +40,7 @@ class NftsController < ApplicationController
     @nft.destroy
   end
 
+  # PUT /nfts/1/comments/1
   def add_comment
     @comment = Comment.find(params(:comment_id))
     # @nft = Nft.find(params(:id))
