@@ -11,7 +11,7 @@ class NftsController < ApplicationController
 
   # GET /nfts/1
   def show
-    render json: @nft, include: :comment
+    render json: @nft, include: :comments
   end
 
   # POST /nfts
@@ -46,7 +46,7 @@ class NftsController < ApplicationController
     # @nft = Nft.find(params(:id))
 
     @nft.comments.push(@comment)
-    render json: @nft, include: :comment
+    render json: @nft, include: :comments
   end
 
   private
