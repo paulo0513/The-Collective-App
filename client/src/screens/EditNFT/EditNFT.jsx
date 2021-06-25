@@ -1,6 +1,6 @@
-import './EditNFT.css'
+import "./EditNFT.css";
 import { useState, useEffect } from "react";
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 export default function EditNFT(props) {
   const [formData, setFormData] = useState({
@@ -35,27 +35,27 @@ export default function EditNFT(props) {
   const { id } = useParams();
 
   useEffect(() => {
-		const prefillFormData = () => {
-			const singleNft = nfts.find((nft) => nft.id === Number(id));
-			setFormData({
-				title: singleNft.title,
-				image_link: singleNft.image_link,
-				created_date: singleNft.created_date,
-				collection_type: singleNft.collection_type,
-				mint_num: singleNft.mint_num,
-				total_minted: singleNft.total_minted,
-				lowest_ask: singleNft.lowest_ask,
-				top_sale: singleNft.top_sale,
-				about_seller: singleNft.about_seller,
-				description: singleNft.description,
-				num_for_sale: singleNft.num_for_sale,
-				not_for_sale: singleNft.not_for_sale,
-			});
-		};
-		if (nfts.length) {
-			prefillFormData();
-		}
-	}, [nfts]);
+    const prefillFormData = () => {
+      const singleNft = nfts.find((nft) => nft.id === Number(id));
+      setFormData({
+        title: singleNft.title,
+        image_link: singleNft.image_link,
+        created_date: singleNft.created_date,
+        collection_type: singleNft.collection_type,
+        mint_num: singleNft.mint_num,
+        total_minted: singleNft.total_minted,
+        lowest_ask: singleNft.lowest_ask,
+        top_sale: singleNft.top_sale,
+        about_seller: singleNft.about_seller,
+        description: singleNft.description,
+        num_for_sale: singleNft.num_for_sale,
+        not_for_sale: singleNft.not_for_sale,
+      });
+    };
+    if (nfts.length) {
+      prefillFormData();
+    }
+  }, [id]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -185,5 +185,5 @@ export default function EditNFT(props) {
         <button>Submit</button>
       </form>
     </div>
-  )
+  );
 }
