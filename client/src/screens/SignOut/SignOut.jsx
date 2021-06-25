@@ -1,7 +1,3 @@
-export default function SignOut() {
-  return (
-    <div>
-      
-    </div>
-  )
+export default function SignOut(props) {
+  return <div></div>;
 }
