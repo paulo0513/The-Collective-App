@@ -30,9 +30,15 @@ function App() {
     history.push("/");
   };
 
+  const handleLogout = () => {
+		setCurrentUser(null);
+		localStorage.removeItem('authToken');
+		removeToken();
+	};
+
   return (
     <div className="App">
-      <Layout>
+      <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
           <Route path="/login">
             <SignIn handleLogin={handleLogin} />
