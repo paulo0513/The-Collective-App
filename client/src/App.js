@@ -3,7 +3,7 @@ import Layout from "./components/Layout/Layout";
 import { Switch, Route, useHistory } from "react-router-dom";
 import SignIn from "./screens/SignIn/SignIn";
 import SignUp from "./screens/SignUp/SignUp";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { loginUser, registerUser, verifyUser } from "./services/auth";
 
 function App() {
@@ -11,12 +11,12 @@ function App() {
   const history = useHistory();
 
   useEffect(() => {
-		const handleVerify = async () => {
-			const userData = await verifyUser();
-			setCurrentUser(userData);
-		};
-		handleVerify();
-	}, []);
+    const handleVerify = async () => {
+      const userData = await verifyUser();
+      setCurrentUser(userData);
+    };
+    handleVerify();
+  }, []);
 
   const handleLogin = async (formData) => {
     const userData = await loginUser(formData);
