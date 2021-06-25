@@ -3,8 +3,15 @@ import Layout from "./components/Layout/Layout";
 import { Switch, Route, useHistory } from "react-router-dom";
 import SignIn from "./screens/SignIn/SignIn";
 import SignUp from "./screens/SignUp/SignUp";
+import Landing from "./screens/Landing/Landing";
+import MainContainer from "./containers/MainContainer";
 import { useState, useEffect } from "react";
-import { loginUser, registerUser, verifyUser } from "./services/auth";
+import {
+  loginUser,
+  registerUser,
+  verifyUser,
+  removeToken,
+} from "./services/auth";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -31,10 +38,10 @@ function App() {
   };
 
   const handleLogout = () => {
-		setCurrentUser(null);
-		localStorage.removeItem('authToken');
-		removeToken();
-	};
+    setCurrentUser(null);
+    localStorage.removeItem("authToken");
+    removeToken();
+  };
 
   return (
     <div className="App">
@@ -46,6 +53,12 @@ function App() {
           <Route path="/signup">
             <SignUp handleRegister={handleRegister} />
           </Route>
+          <Route exact path="/">
+            <MainContainer />
+          </Route>
+          {/* <Route path='/'>
+            <Landing />
+          </Route> */}
         </Switch>
       </Layout>
     </div>
