@@ -47,7 +47,7 @@ export default function SignUp(props) {
           onChange={handleChange}
         />
       </label>
-      <Link to='/login'>Already Signed Up?</Link>
+      <Link to="/login">Already Signed Up?</Link>
       <button>Submit</button>
     </form>
   );

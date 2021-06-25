@@ -26,6 +26,6 @@ export const deleteNFT = async (id) => {
 };
 
 export const addComment = async (nftId, commentId) => {
-  const resp = await api.put(`nfts/${nftId}/comments/${commentId}`);
+  const resp = await api.put(`/nfts/${nftId}/comments/${commentId}`);
   return resp.data;
 };

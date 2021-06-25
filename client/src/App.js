@@ -10,7 +10,7 @@ import {
   loginUser,
   registerUser,
   verifyUser,
-  removeToken
+  removeToken,
 } from "./services/auth";
 
 function App() {
