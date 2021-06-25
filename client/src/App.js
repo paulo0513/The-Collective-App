@@ -1,14 +1,15 @@
 import './App.css';
 import Layout from './components/Layout/Layout'
 import { Switch, Route } from 'react-router-dom'
+import SignIn from './screens/SignIn/SignIn';
 
 function App() {
   return (
     <div className="App">
       <Layout>
         <Switch>
-          <Route>
-            <h3>1</h3>
+          <Route path='/login'>
+            <SignIn />
           </Route>
         </Switch>
       </Layout>
