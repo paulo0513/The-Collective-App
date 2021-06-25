@@ -11,7 +11,7 @@ export default function NFTs(props) {
 			{nfts.map((nft) => (
 				<Fragment key={nft.id}>
 					<Link to={`/nfts/${nft.id}`}>
-						<p>{nft.name}</p>
+						<p>{nft.title}</p>
 					</Link>
 					<Link to={`/nfts/${nft.id}/edit`}>
 						<button>Edit</button>
