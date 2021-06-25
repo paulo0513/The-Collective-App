@@ -8,9 +8,9 @@ import { loginUser } from './services/auth'
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
 
-  const handleSignIn = async (formData) => {
-    const userdata = await loginUser(formData);
-    setCurrentUser(UserData)
+  const handleLogin = async (formData) => {
+    const userData = await loginUser(formData);
+    setCurrentUser(userData)
   }
 
   return (
@@ -18,7 +18,7 @@ function App() {
       <Layout>
         <Switch>
           <Route path='/login'>
-            <SignIn handleSignIn={handleSignIn}/>
+            <SignIn handleLogin={handleLogin}/>
           </Route>
         </Switch>
       </Layout>

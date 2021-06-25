@@ -8,7 +8,7 @@ export default function SignIn(props) {
     password: ''
   });
   const { username, password } = formData;
-  const { handleSignIn } = props;
+  const { handleLogin } = props;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,7 +21,7 @@ export default function SignIn(props) {
   return (
     <form onSubmit={(e) => {
       e.preventDefault();
-      handleSignIn(formData);
+      handleLogin(formData);
     }}>
       <h3>Login</h3>
       <label>Username:
