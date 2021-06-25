@@ -46,9 +46,6 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        {/* <Route path='/'>
-            <Landing />
-          </Route> */}
         <Layout currentUser={currentUser} handleLogout={handleLogout}>
           <Route path="/login">
             <SignIn handleLogin={handleLogin} />
@@ -56,8 +53,11 @@ function App() {
           <Route path="/signup">
             <SignUp handleRegister={handleRegister} />
           </Route>
-          <Route exact path="/">
-            <MainContainer />
+          <Route path="/">
+            <MainContainer currentUser={currentUser} />
+          </Route>
+          <Route path="/">
+            <Landing />
           </Route>
         </Layout>
       </Switch>
