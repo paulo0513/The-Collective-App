@@ -1,5 +1,6 @@
 class NftsController < ApplicationController
-  before_action :set_nft, only: [:show, :update, :destroy]
+  before_action :set_nft, only: [:show, :update, :destroy, :add_comment]
+  before_action :authorize_request, only: [:create, :update, :destroy]
 
   # GET /nfts
   def index
@@ -10,15 +11,16 @@ class NftsController < ApplicationController
 
   # GET /nfts/1
   def show
-    render json: @nft
+    render json: @nft, include: :comments
   end
 
   # POST /nfts
   def create
     @nft = Nft.new(nft_params)
+    @nft.user = @current_user
 
     if @nft.save
-      render json: @nft, status: :created, location: @nft
+      render json: @nft, status: :created
     else
       render json: @nft.errors, status: :unprocessable_entity
     end
@@ -36,6 +38,15 @@ class NftsController < ApplicationController
   # DELETE /nfts/1
   def destroy
     @nft.destroy
+  end
+
+  # PUT /nfts/1/comments/1
+  def add_comment
+    @comment = Comment.find(params(:comment_id))
+    # @nft = Nft.find(params(:id))
+
+    @nft.comments.push(@comment)
+    render json: @nft, include: :comments
   end
 
   private

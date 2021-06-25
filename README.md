@@ -34,7 +34,7 @@ Here's what you can expect from our product roadmap for the remainder of 2021:
 Server (Back End)
     - Have a RESTful JSON API.
     - Build a Ruby on Rails server, exposing RESTful JSON endpoints.
-        - Build a database with 3 tables: users, GIF NFTs, and comments (associations on comment table)
+        - Build a database with 3 tables: users, NFTs, and comments (associations on comment table)
     - Utilize Rails to define models for interacting with the database.
     - Implement working generic controller actions for Full CRUD (index, show, create, update, delete) between your non-User tables.
 
@@ -127,28 +127,28 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Project Proposal    |    H     |     8 hrs      |     0 hrs     |     TBD     |
-| Backend Framework   |    H     |     2 hrs      |     0 hrs     |     TBD     |
-| Model Setup         |    H     |     1 hrs      |     0 hrs     |     TBD     |
-| Route Setup         |    H     |     1 hrs      |     0 hrs     |     TBD     |
-| Controller Setup    |    H     |     2 hrs      |     0 hrs     |     TBD     |
-| Authentication      |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| Cors Setup          |    H     |     1 hrs      |     0 hrs     |     TBD     |
-| Seed Data           |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| Backend Testing     |    H     |     1 hrs      |     0 hrs     |     TBD     |
-| Frontend Framework  |    H     |     2 hrs      |     0 hrs     |     TBD     |
-| Main Container/App.jsx |    H     |     2 hrs      |     0 hrs     |     TBD     |
-| Services            |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| Home Screen - all NFTs |    H     |     2 hrs      |     0 hrs     |     TBD     |
-| Detail Screen       |    H     |     2 hrs      |     0 hrs     |     TBD     |
-| Edit Screen         |    H     |     2 hrs      |     0 hrs     |     TBD     |
-| Sign In Screen      |    H     |     2 hrs      |     0 hrs     |     TBD     |
-| Sign Up Screen      |    H     |     2 hrs      |     0 hrs     |     TBD     |
-| NFT Cards           |    H     |     2 hrs      |     0 hrs     |     TBD     |
-| Layout/Nav          |    H     |     2 hrs      |     0 hrs     |     TBD     |
-| CSS                 |    H     |     16 hrs      |     0 hrs     |     TBD     |
-| Deployment          |    H     |     2 hrs      |     0 hrs     |     TBD     |
-| TOTAL               |          |     61 hrs      |     0 hrs     |     TBD     |
+| Project Proposal    |    H     |     8 hrs      |     8 hrs     |     8 hrs     |
+| Backend Framework   |    H     |     2 hrs      |     2 hrs     |     2 hrs     |
+| Model Setup         |    H     |     1 hrs      |     2 hrs     |     2 hrs     |
+| Route Setup         |    H     |     1 hrs      |     1 hrs     |     1 hrs     |
+| Controller Setup    |    H     |     2 hrs      |     1 hrs     |     1 hrs     |
+| Authentication      |    H     |     3 hrs      |     1.5 hrs     |    1.5 hrs     |
+| Cors Setup          |    H     |     1 hrs      |     .5 hrs     |     .5 hrs     |
+| Seed Data           |    H     |     3 hrs      |     2 hrs     |     2hrs     |
+| Backend Testing     |    H     |     1 hrs      |      hrs     |     hrs     |
+| Frontend Framework  |    H     |     2 hrs      |     2 hrs     |     2 hrs     |
+| Main Container/App.jsx |    H     |     2 hrs      |     0 hrs     |     hrs     |
+| Services            |    H     |     3 hrs      |     3 hrs     |     3 hrs     |
+| Home Screen - all NFTs |    H     |     2 hrs      |     0 hrs     |     hrs     |
+| Detail Screen       |    H     |     2 hrs      |     0 hrs     |     hrs     |
+| Edit Screen         |    H     |     2 hrs      |     0 hrs     |     hrs     |
+| Sign In Screen      |    H     |     2 hrs      |     0 hrs     |     hrs     |
+| Sign Up Screen      |    H     |     2 hrs      |     0 hrs     |     hrs     |
+| NFT Cards           |    H     |     2 hrs      |     0 hrs     |     hrs     |
+| Layout/Nav          |    H     |     2 hrs      |     0 hrs     |     hrs     |
+| CSS                 |    H     |     16 hrs      |     0 hrs     |     hrs     |
+| Deployment          |    H     |     2 hrs      |     0 hrs     |     hrs     |
+| TOTAL               |          |     61 hrs      |     0 hrs     |     hrs     |
 
 <br>
 
@@ -156,7 +156,7 @@ src
 
 #### ERD Model
 
-https://i.imgur.com/7532AJu.png
+https://i.imgur.com/hxMAyDA.png
 
 <br>
 
