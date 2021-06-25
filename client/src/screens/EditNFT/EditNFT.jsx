@@ -55,7 +55,7 @@ export default function EditNFT(props) {
     if (nfts.length) {
       prefillFormData();
     }
-  }, [id]);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
