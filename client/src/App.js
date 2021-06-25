@@ -10,7 +10,7 @@ import {
   loginUser,
   registerUser,
   verifyUser,
-  removeToken,
+  removeToken
 } from "./services/auth";
 
 function App() {
@@ -45,8 +45,11 @@ function App() {
 
   return (
     <div className="App">
-      <Layout currentUser={currentUser} handleLogout={handleLogout}>
-        <Switch>
+      <Switch>
+        {/* <Route path='/'>
+            <Landing />
+          </Route> */}
+        <Layout currentUser={currentUser} handleLogout={handleLogout}>
           <Route path="/login">
             <SignIn handleLogin={handleLogin} />
           </Route>
@@ -56,11 +59,8 @@ function App() {
           <Route exact path="/">
             <MainContainer />
           </Route>
-          {/* <Route path='/'>
-            <Landing />
-          </Route> */}
-        </Switch>
-      </Layout>
+        </Layout>
+      </Switch>
     </div>
   );
 }
