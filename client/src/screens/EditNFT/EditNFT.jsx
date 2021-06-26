@@ -52,7 +52,7 @@ export default function EditNFT(props) {
         not_for_sale: singleNft.not_for_sale,
       });
     };
-    if (nfts.length) {
+    if (nfts?.length) {
       prefillFormData();
     }
   }, [nfts]);
@@ -73,7 +73,7 @@ export default function EditNFT(props) {
           handleUpdate(formData);
         }}
       >
-        <h3>Create NFT</h3>
+        <h3>Edit NFT</h3>
         <label>
           Title:
           <input

@@ -20,9 +20,10 @@ export default function NFTs(props) {
 				</Fragment>
 			))}
 			<br />
-			<Link to='/nfts/new'>
+			<Link to='/nfts/post'>
 				<button>Create</button>
-			</Link>
+      </Link>
+      <Link to='/'>login</Link>
     </div>
   )
 }
