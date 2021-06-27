@@ -11,12 +11,12 @@ export const getOneNFT = async (id) => {
 };
 
 export const postNFT = async (data) => {
-  const resp = await api.post("/nfts", { food: data });
+  const resp = await api.post("/nfts", { nft: data });
   return resp.data;
 };
 
 export const putNFT = async (id, data) => {
-  const resp = await api.put(`/nfts/${id}`, { food: data });
+  const resp = await api.put(`/nfts/${id}`, { nft: data });
   return resp.data;
 };
 

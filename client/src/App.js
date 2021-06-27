@@ -56,7 +56,7 @@ function App() {
           <Route path="/">
             <MainContainer currentUser={currentUser} />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Landing />
           </Route>
         </Layout>

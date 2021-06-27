@@ -57,6 +57,6 @@ class NftsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def nft_params
-      params.require(:nft).permit(:image_link, :title, :created_date, :collection_type, :mint_num, :total_minted, :lowest_ask, :top_sale, :about_seller, :description, :num_for_sale, :not_for_sale, :user_id_id)
+      params.require(:nft).permit(:image_link, :title, :created_date, :collection_type, :mint_num, :total_minted, :lowest_ask, :top_sale, :about_seller, :description, :num_for_sale, :not_for_sale, :user_id)
     end
 end

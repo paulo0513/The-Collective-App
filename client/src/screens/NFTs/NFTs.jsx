@@ -1,29 +1,28 @@
-import './NFTs.css'
-import { Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import "./NFTs.css";
+import { Link } from "react-router-dom";
+import { Fragment } from "react";
+import Card from "../../components/Card/Card";
 
 export default function NFTs(props) {
-  const { nfts, handleDelete } = props
-
+  const { nfts, handleDelete } = props;
+  // console.log(nfts)
   return (
     <div>
       <h3>NFTs</h3>
-			{nfts.map((nft) => (
-				<Fragment key={nft.id}>
-					<Link to={`/nfts/${nft.id}`}>
-						<p>{nft.title}</p>
-					</Link>
-					<Link to={`/nfts/${nft.id}/edit`}>
-						<button>Edit</button>
-					</Link>
-					<button onClick={() => handleDelete(nft.id)}>Delete</button>
-				</Fragment>
-			))}
-			<br />
-			<Link to='/nfts/post'>
-				<button>Create</button>
+      {nfts.map((nft) => {
+        return (
+          <Fragment key={nft.id}>
+            <Link to={`/nfts/${nft.id}`}>
+              console.log(nft)
+              <Card nft={nft} />
+            </Link>
+          </Fragment>
+        );
+      })}
+      <Link to="/nfts/post">
+        <button>Create</button>
       </Link>
-      <Link to='/'>login</Link>
+      <Link to="/">login</Link>
     </div>
-  )
+  );
 }

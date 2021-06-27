@@ -6,7 +6,13 @@ import DetailNFT from "../screens/DetailNFT/DetailNFT";
 import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
 import { getAllComments } from "../services/comments";
-import { deleteNFT, getAllNFTs, postNFT, putNFT, addComment } from "../services/nfts";
+import {
+  deleteNFT,
+  getAllNFTs,
+  postNFT,
+  putNFT,
+  addComment,
+} from "../services/nfts";
 
 export default function MainContainer() {
   const [nfts, setNfts] = useState([]);
@@ -63,11 +69,14 @@ export default function MainContainer() {
         <Route path="/nfts/:id/edit">
           <EditNFT handleUpdate={handleUpdate} />
         </Route>
-        <Route path="/nfts/:id">
-          <DetailNFT comments={comments} handleCreateComments={handleCreateComments}/>
-        </Route>
         <Route path="/nfts/post">
           <AddNFT handleCreate={handleCreate} />
+        </Route>
+        <Route path="/nfts/:id">
+          <DetailNFT
+            comments={comments}
+            handleCreateComments={handleCreateComments}
+          />
         </Route>
         <Route path="/nfts">
           <NFTs nfts={nfts} handleDelete={handleDelete} />
