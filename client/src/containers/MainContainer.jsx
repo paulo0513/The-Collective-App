@@ -67,7 +67,7 @@ export default function MainContainer() {
     <div>
       <Switch>
         <Route path="/nfts/:id/edit">
-          <EditNFT handleUpdate={handleUpdate} />
+          <EditNFT nfts={nfts} handleUpdate={handleUpdate}/>
         </Route>
         <Route path="/nfts/post">
           <AddNFT handleCreate={handleCreate} />
@@ -85,3 +85,6 @@ export default function MainContainer() {
     </div>
   );
 }
+
+
+// potential bug, pass in nfts for addNFT and Detail NFTs

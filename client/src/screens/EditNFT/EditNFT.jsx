@@ -36,20 +36,20 @@ export default function EditNFT(props) {
 
   useEffect(() => {
     const prefillFormData = () => {
-      const singleNft = nfts.find((nft) => nft.id === Number(id));
+      const singleNft = nfts?.find((nft) => nft?.id === Number(id));
       setFormData({
-        title: singleNft.title,
-        image_link: singleNft.image_link,
-        created_date: singleNft.created_date,
-        collection_type: singleNft.collection_type,
-        mint_num: singleNft.mint_num,
-        total_minted: singleNft.total_minted,
-        lowest_ask: singleNft.lowest_ask,
-        top_sale: singleNft.top_sale,
-        about_seller: singleNft.about_seller,
-        description: singleNft.description,
-        num_for_sale: singleNft.num_for_sale,
-        not_for_sale: singleNft.not_for_sale,
+        title: singleNft?.title,
+        image_link: singleNft?.image_link,
+        created_date: singleNft?.created_date,
+        collection_type: singleNft?.collection_type,
+        mint_num: singleNft?.mint_num,
+        total_minted: singleNft?.total_minted,
+        lowest_ask: singleNft?.lowest_ask,
+        top_sale: singleNft?.top_sale,
+        about_seller: singleNft?.about_seller,
+        description: singleNft?.description,
+        num_for_sale: singleNft?.num_for_sale,
+        not_for_sale: singleNft?.not_for_sale,
       });
     };
     if (nfts?.length) {
@@ -70,7 +70,7 @@ export default function EditNFT(props) {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          handleUpdate(formData);
+          handleUpdate(id, formData);
         }}
       >
         <h3>Edit NFT</h3>
